@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+
+	<title></title>
+
+
+	<meta charset="utf-8">
+
+
+	<meta name="author" content="wangzy">
+
+
+	<meta name="description" content=""/>
+
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0" />
+	<link rel="stylesheet" href="/plugin/bootstrap-3.3.7/css/bootstrap.min.css">
+
+	<link rel="stylesheet" type="text/css" href="/css/reset.css">
+
+
+	<link rel="stylesheet" type="text/css" href="/css/main_responsive.css">
+
+
+    <script type="text/javascript" src="/js/jquery-3.2.1.min.js"></script>
+
+
+    <script type="text/javascript" src="/js/carouFredSel.js"></script>
+
+
+    <script type="text/javascript" src="/js/main.js"></script>
+
+	<script type="text/javascript" src="/plugin/bootstrap-3.3.7/js/bootstrap.min.js"></script>
+	
+	<link rel="icon" href="/favicon.png" />
+
+</head>
+
+
+<body>
+
+
+
+
+
+	<header>
+
+
+		<div class="wrapper">
+
+
+			<img src="/img/logo.png" alt="Crafty" class="logo">
+
+
+			<a href="#" class="menu_icon" id="menu_icon"></a>
+
+
+			<nav id="nav_menu">
+
+					<ul>
+						<li><a href="/">首页</a></li>
+						<li><a href="/list/product?type=product">服务项目</a></li>
+						<li><a href="/list/case?type=case">案例</a></li>
+						<li><a href="/list/news?type=news">新闻</a></li>
+						<li><a href="/about">关于我们</a></li>
+					</ul>
+	
+				</nav>
+
+
+		</div>
+	</header><!--  End Header  -->
+
+
+
+
+
+	<section class="billboard">
+
+
+			<div class="wrapper">
+
+
+				<div class="caption">
+
+
+					<p>装逼的事情</p>
+
+
+					<p>sunt culpa officia deserunt</p>
+
+
+				</div>
+
+
+			</div>
+
+
+	</section><!--  End Billboard  -->
+
+
+
+
+
+	<section class="content-wrap" style="background: #ebebeb">
+        <div class="container">
+            <div class="row">
+
+                <main class="col-md-8 main-content">
+
+
+
+
+
+
+
+</main>
+
+<aside class="col-md-4 sidebar">
+                <!-- start widget -->
+<!-- end widget -->
+
+<!-- start tag cloud widget -->
+<div class="widget">
+	<h4 class="title">联系我们</h4>
+	<div class="content community">
+	    <p>云南恒隆环保有限责任公司</p>
+		<p>办公室：0873-3727987</p>
+		<p>地  址：云南省蒙自市天竺路与朝阳路交汇处</p>
+		<p>邮  箱：henglonghuanbao@163.com</p>
+	</div>
+</div>
+<!-- end tag cloud widget -->
+
+
+
+
+<!-- start widget -->
+<!--<div class="widget">
+	<h4 class="title">下载 Ghost</h4>
+	<div class="content download">
+		<a href="/download/" class="btn btn-default btn-block" onclick="_hmt.push(['_trackEvent', 'big-button', 'click', '下载Ghost'])">Ghost 中文版（0.7.4）</a>
+	</div>
+</div>-->
+<!-- end widget -->
+
+<!-- start tag cloud widget -->
+<div class="widget">
+	<h4 class="title">最新文章</h4>
+	<div class="content tag-cloud">
+
+	<a href="#">文章的标题</a>
+	<a href="#">文章的标题文章的标题</a>
+	<a href="#">文章的标题</a>
+	<a href="#">文章的标题</a>
+	<a href="#">文章的标题</a>
+	<a href="#">文章的标题文章的标题文章的标题</a>
+	<a href="#">文章的标题</a>
+	<a href="#">文章的标题</a>
+
+
+		<a href="/tag-cloud/">...</a>
+	</div>
+</div>
+<!-- end tag cloud widget -->
+
+<!-- start widget -->
+<!-- end widget -->
+
+<!-- start widget -->
+<!-- end widget -->                </aside>
+
+            </div>
+        </div>
+    </section>
+
+
+	<footer>
+
+
+		<img src="/img/logo_footer.png" alt="Crafty">
+
+
+		<p class="rights">Copyright © www.jq22.com</p>
+
+
+	</footer><!--  End Footer  -->
+
+
+<script type="text/javascript" src="http://cdn.webfont.youziku.com/wwwroot/js/wf/youziku.api.min.js"></script>
+<script type="text/javascript">
+	
+   $youziku.load(".fzpf1", "77255ff58e164cc58f60ad59e490795e", "YouYuan");
+	
+   $youziku.draw();
+   $(function(){
+		function getUrlParam(name) {
+			var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)"); //构造一个含有目标参数的正则表达式对象
+			var r = window.location.search.substr(1).match(reg);  //匹配目标参数
+			if (r != null) return unescape(r[2]); return null; //返回参数值
+		}
+		var id = getUrlParam("id")
+		var author = 'admin'
+		$.get("/action/single",{id:id}).done(function(data){
+			console.log(data)
+			var html = `<article id="`+data._id+`" class="post tag-android tag-ke-hu-duan">
+
+				<div class="post-head">
+					<h1 class="post-title"><a href="/details/`+data._id+`?id=`+data._id+`">`+data.title+`</a></h1>
+					<div class="post-meta">
+						<span class="author">作者：<a href="#">`+author+`</a></span> •
+						<time class="post-date">`+data.time+`</time>
+					</div>
+				</div>
+				<div class="featured-media">
+					<a href="/android-app-for-ghost/"><img src="`+data.cover+`" alt="`+data.title+`"></a>
+				</div>
+				<div class="post-content">
+					`+data.content+`
+				</div>
+			</article>`
+			$(".main-content").append(html)
+		});
+	});
+
+</script>
+
+
+</body>
+
+
+</html>

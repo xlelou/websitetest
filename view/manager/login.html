@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html class='beideng' style="background: url(../img/c.jpg) no-repeat fixed">
+	<head>
+<script src="/js/jquery-3.2.1.min.js"></script>
+		<link rel="stylesheet" href="/plugin/bootstrap-3.3.7/css/bootstrap.css" />
+		<script src="/plugin/bootstrap-3.3.7/js/bootstrap.min.js"></script>
+		<link rel="stylesheet" href="/plugin/bootstrap-3.3.7/css/main.css" />
+		<link rel="icon" href="/favicon.png" />
+		<meta charset="UTF-8">
+		<title>登陆</title>
+	</head>
+	<body class='beideng'>
+
+		<form method="post" action="/manager/action" class="center-block chao">
+			<dd><h4 class='text-center text-info'>用户名：</h4><input name="username" class="form-control" type="text" /></dd>
+			<dd><h4 class='text-center text-info'>密码：</h4><input name="password" class="form-control" type="password"/></dd>
+			<br>
+			<button type="submit" class='btn btn-info col-xs-12'>登陆</button>
+		</form>
+
+		<script>
+		$('.btn').click(function(event) {
+
+			var $name=$('.form-control').eq(0).val()
+			var $password=$('.form-control').eq(1).val()
+
+			if (!$name) {
+				alert('请输入用户名')
+				return false
+			}
+			if (!$password) {
+				alert('请输入密码')
+				return false
+			}
+		});
+
+
+		</script>
+
+
+
+
+  <br class="clear">
+		<%
+			if(typeof info!="undefined"){
+		%>
+		<p class="cuowu alert alert-danger"><%= info%></p>
+		<%
+			}
+		%>
+	</body>
+</html>

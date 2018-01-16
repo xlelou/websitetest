@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+
+	<title>恒隆环保</title>
+
+
+	<meta charset="utf-8">
+
+
+	<meta name="author" content="wangzy">
+
+
+	<meta name="description" content="云南恒隆环保有限公司"/>
+
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0" />
+
+
+	<link rel="stylesheet" type="text/css" href="/css/reset.css">
+
+
+	<link rel="stylesheet" type="text/css" href="/css/main_responsive.css">
+
+
+    <script type="text/javascript" src="/js/jquery-3.2.1.min.js"></script>
+
+
+    <script type="text/javascript" src="/js/carouFredSel.js"></script>
+
+
+    <script type="text/javascript" src="/js/main.js"></script>
+
+	<link rel="icon" href="/favicon.png" />
+</head>
+
+
+<body>
+
+
+
+
+
+	<header>
+
+
+		<div class="wrapper">
+
+
+			<img src="/img/logo.png" alt="云南恒隆环保" class="logo">
+
+
+			<a href="/" class="menu_icon" id="menu_icon"></a>
+
+
+			<nav id="nav_menu">
+
+				<ul>
+					<li><a href="/">首页</a></li>
+					<li><a href="/list/product?type=product">服务项目</a></li>
+					<li><a href="/list/case?type=case">案例</a></li>
+					<li><a href="/list/news?type=news">新闻</a></li>
+					<li><a href="/about">关于我们</a></li>
+				</ul>
+
+			</nav>
+
+
+		</div>
+	</header><!--  End Header  -->
+
+
+
+
+
+	<section class="billboard">
+
+
+			<div class="wrapper">
+
+
+				<div class="caption">
+
+
+					<p>恒隆环保</p>
+
+
+					<p>专注环保工程</p>
+
+
+				</div>
+
+
+			</div>
+
+
+	</section><!--  End Billboard  -->
+
+
+
+
+
+	<section class="features">
+
+
+
+
+
+		<div class="wrapper">
+			
+		<% for(let i=0;i<products.length;i++) { %>
+	
+				<div class="feature">
+
+
+					<div class="ficon">
+
+
+						<img src="/img/icon6.png" alt="">
+
+
+					</div>
+
+
+					<div class="details_exp">
+
+
+						<h3><%=products[i].title%></h3>
+						<p>说的就是简介简介简介简介说的就是简介简介简介简介说的就是简介简介简介简介说的就是简介简介简介简介</p>
+						<a href="/details/id">查看详情<span>→</span></a>
+
+					</div>
+
+
+				</div>
+		<%  }   %>
+
+			</div>
+
+
+
+
+
+	</section><!--  End Features  -->
+
+
+
+
+
+	<section class="testimonials wrapper">
+
+
+
+
+
+		<span class="sep_line sep_top">
+
+
+		</span>
+
+
+
+
+
+		<h2>最新动态</h2>
+
+
+		<div class="testi_slider" id="tslider">
+
+			<%  for(let i=0;i<news.length;i++){ %>
+					<div class="t">
+
+
+				      <p class="fzpf1"><%=news[i].title%></p>
+
+
+				     <p class="author">客户</p>
+				     
+					</div>
+			<% } %>
+		</div>
+
+
+		<div id="t_navigation"></div>
+
+
+		<span class="sep_line sep_bottom"></span>
+
+
+
+
+
+	</section><!--  End Testimonials  -->
+
+
+
+
+
+	<section class="info">
+
+
+
+
+
+		<div class="info_pic">
+
+
+
+
+
+		</div>
+
+
+		<div class="info_details">
+
+
+			<h3>云南恒隆环保有限责任公司</h3>
+
+
+			<p class="fzpf1">云南恒隆环保有限责任公司，是一家集研发、设计、生产、销售、运营于一体的高新技术企业，拥有一批环保技术咨询、环保工程设计、施工、安装调试及运营维护的专业技术人员，可承揽各类环保工程项目。</p>
+
+
+			<a href="/about" class="fzpf1">联系我们 <span>→</span></a>
+
+
+		</div>
+
+
+
+
+
+	</section><!--  End Info  -->
+
+
+
+
+
+	<section class="cta">
+
+
+		<h3>这个地方干嘛还没想好</h3>
+
+
+		<p>这个地方干嘛还没想好</p>
+
+
+		<a href="#" class="cta_btn">这个地方干嘛还没想好</a>
+
+
+		<span class="cta_sep"></span>
+
+
+	</section><!--  End cta  -->
+
+
+
+
+
+	<footer>
+
+
+		<img src="/img/logo_footer.png" alt="">
+
+
+		<p class="rights">Copyright © 恒隆环保</p>
+
+
+	</footer><!--  End Footer  -->
+
+
+<script type="text/javascript" src="http://cdn.webfont.youziku.com/wwwroot/js/wf/youziku.api.min.js"></script>
+<script type="text/javascript">
+   $youziku.load(".fzpf1", "77255ff58e164cc58f60ad59e490795e", "YouYuan");
+
+   $youziku.draw();
+
+
+</script>
+
+
+</body>
+
+
+</html>
